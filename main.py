@@ -1,6 +1,6 @@
 
 # -*- coding: utf-8 -*-
-# MBI 360° - Evaluación Integral
+# MBI 360° - Evaluación Integral con PDF UTF-8
 # Autor: Aníbal Saavedra
 
 import streamlit as st
@@ -109,15 +109,17 @@ if modulos_seleccionados:
     st.success("✅ Resultados guardados en CSV correctamente.")
 
     # ============================
-    # GENERAR PDF CON RESULTADOS
+    # GENERAR PDF CON UTF-8
     # ============================
 
     pdf_file = "informe_mbi360.pdf"
     pdf = FPDF()
     pdf.add_page()
-    pdf.set_font("Arial", "B", 16)
-    pdf.cell(0, 10, "Informe MBI 360° – Evaluación Integral", ln=True)
-    pdf.set_font("Arial", "", 12)
+    pdf.add_font("DejaVu", "", "DejaVuSans.ttf", uni=True)
+    pdf.set_font("DejaVu", "", 14)
+    pdf.cell(0, 10, "🌀 Informe MBI 360° – Evaluación Integral", ln=True)
+    pdf.ln(4)
+    pdf.set_font("DejaVu", "", 11)
     pdf.cell(0, 10, f"Nombre: {nombre}", ln=True)
     pdf.cell(0, 10, f"DNI: {dni}", ln=True)
     pdf.cell(0, 10, f"Sexo: {sexo} | Género: {genero}", ln=True)
