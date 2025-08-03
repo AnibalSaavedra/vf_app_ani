@@ -95,7 +95,7 @@ if modulos_seleccionados:
     st.markdown("---")
     st.subheader("💾 Guardar Resultados")
 
-    csv_file = "MBI360_APP/respuestas_mbi360.csv"
+    csv_file = "respuestas_mbi360.csv"
     campos = ["Fecha", "Nombre", "DNI", "Sexo", "Género", "Nacimiento", "Correo", "WhatsApp"] + list(resultados.keys())
     datos = [datetime.now().strftime("%Y-%m-%d %H:%M:%S"), nombre, dni, sexo, genero, str(fecha_nacimiento), correo, whatsapp] + list(resultados.values())
 
@@ -112,7 +112,7 @@ if modulos_seleccionados:
     # GENERAR PDF CON RESULTADOS
     # ============================
 
-    pdf_file = "MBI360_APP/informe_mbi360.pdf"
+    pdf_file = "informe_mbi360.pdf"
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", "B", 16)

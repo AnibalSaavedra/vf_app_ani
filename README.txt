@@ -3,15 +3,15 @@ MBI 360° – Evaluación Integral del Ser
 Autor: Aníbal Saavedra
 
 Instrucciones:
-1. Asegúrate de tener instaladas las librerías necesarias:
+1. Instala las dependencias necesarias:
    pip install streamlit fpdf
 
-2. Ejecuta la app con:
+2. Ejecuta la app desde terminal con:
    streamlit run main.py
 
-3. Se generarán automáticamente:
-   - respuestas_mbi360.csv con los datos y resultados
-   - informe_mbi360.pdf como resumen descargable
+3. Archivos generados:
+   - respuestas_mbi360.csv con todos los resultados
+   - informe_mbi360.pdf personalizado por usuario
 
 4. También puedes compartir el resumen por WhatsApp desde la app.
 
