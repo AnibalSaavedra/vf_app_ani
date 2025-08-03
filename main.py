@@ -8,6 +8,7 @@ from datetime import datetime
 import csv
 from fpdf import FPDF
 import os
+from pathlib import Path
 
 # ============================
 # FORMULARIO DE DATOS PERSONALES
@@ -115,7 +116,8 @@ if modulos_seleccionados:
     pdf_file = "informe_mbi360.pdf"
     pdf = FPDF()
     pdf.add_page()
-    pdf.add_font("DejaVu", "", "DejaVuSans.ttf", uni=True)
+    font_path = Path(__file__).parent / "DejaVuSans.ttf"
+    pdf.add_font("DejaVu", "", str(font_path), uni=True)
     pdf.set_font("DejaVu", "", 14)
     pdf.cell(0, 10, "🌀 Informe MBI 360° – Evaluación Integral", ln=True)
     pdf.ln(4)
